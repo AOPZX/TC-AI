@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC Lottery</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .animation {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animation">WELCOME TO TC LOTTERY MOD</h1>
+        <p class="animation">MOD APK CREATED BY @ZX_OP04</p>
+        <button class="animation" onclick="enter()">ENTER</button>
+    </div>
+
+    <div id="lottery-container" style="display: none;">
+        <h2>TC LOTTERY WITH AI</h2>
+        <div id="server-status">SERVER: CONNECTED</div>
+        <div>
+            <label for="period-number">ENTER PERIOD NUMBER (Full Number):</label>
+            <input type="text" id="period-number" maxlength="12">
+        </div>
+        <button id="check-button">CHECK</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function enter() {
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById('lottery-container').style.display = 'block';
+        }
+
+        document.getElementById('check-button').addEventListener('click', function () {
+            const randomResult = Math.random() < 0.5 ? 'SMALL' : 'BIG';
+            document.getElementById('result').textContent = 'RESULT: ' + randomResult;
+        });
+    </script>
+</body>
+</html>
